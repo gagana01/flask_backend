@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{%block titleblock %}
+
+History
+
+{% endblock %}
+
+{% block  content %}
+<h1 align = "center">Shortened URLs</h1>
+<table align = "center">
+    <tr>
+        <th>Original Url</th>
+        <th>Short Url</th>
+        </tr>
+        {% for i in hist %}
+        <tr>
+            <td>{{i.user_url}}</td>
+            <td>{{i.short_url}}</td>         
+        </tr>
+        {% endfor %}
+ </table>
+ 
+    
+{%endblock%}

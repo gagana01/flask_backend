@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{%block title%}
+Home
+{%endblock%}
+
+
+{%block content%} 
+<center>
+    <div class="container">
+            <body>
+            <form action = "{{url_for('result')}}" method="post">
+                <Label><b>New URL:</b></Label>
+                <input type="text", name="url", placeholder = "Enter a valid url">
+                <button>Submit</button>
+            </form>
+    </div>
+    <h3>Shortened Url:</h3>
+    <h4><a href={{short_url}}>{{short_url}}</a></h4>
+
+        
+
+{%endblock%}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+       {%block title %}
+        
+       {% endblock %}
+
+    </title>
+</head>
+<style>
+    .header {
+        overflow:hidden;
+        background-color: white;
+        padding:0px 0px;
+    }
+
+    .header a{
+        float :left;
+        text-align: center;
+        padding:8px;
+        text-decoration: none;
+    }
+
+    .header-right{
+        float:right;
+        margin-top : 25px;
+        margin-right : 25px;
+    }
+    
+    
+</style>
+<body>
+    <div class="header">
+        <a><h1>URL SHORTENER</h1></a>
+
+        <div class = "header-right">
+            <a class="active" href="{{url_for('index') }}">Home</a>
+            <a href="{{url_for('history') }}">History</a>
+        </div>
+    </div>
+    
+
+        {% block content %}
+
+        {% endblock %}
+    </body>
+</html>
